@@ -1,6 +1,6 @@
 [submodule "event-server"]
 	path = event-server
-	url = git@github.com:bio-digester/event-server.git
+	url = https://github.com/bio-digester/event-server.git
 [submodule "raspberry-app"]
 	path = raspberry-app
-	url = git@github.com:bio-digester/raspberry-app.git
+	url = https://github.com/bio-digester/raspberry-app.git
