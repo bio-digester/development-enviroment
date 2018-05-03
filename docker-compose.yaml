@@ -1,7 +1,7 @@
 version: '2'
 services:
   app:
-    build: .
+    build: ./raspberry-app
     ports:
     - 80:3000/tcp
     command:
@@ -21,13 +21,8 @@ services:
       POSTGRES_PASSWORD: raspberry 
       POSTGRES_USER: raspberry_user
   eventserver:
-    image: python:3.5
+    build: ./event-server
     volumes:
-      - ./event-server:/event-server
-    command: 
-      - python3
-      - /event-server/server.py
+    - ./event-server:/event-server
     ports:
-      - 6500:6500
-    environment:
-      - PYTHONUNBUFFERED=1
+    - 6500:6500
